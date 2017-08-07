@@ -182,10 +182,6 @@ leading to fragile and hard to support programs.
 
 """
 
-from collections import Iterable,Sequence,Mapping
-from .bir import Tid, parse_addr
-from .bil import Int
-
 class ADT(object):
     """Algebraic Data Type.
 
@@ -439,6 +435,10 @@ class Visitor(object):
                             return r
                         if meth == "visit":
                             break
+
+from collections import Iterable,Sequence,Mapping
+from .bir import Tid, parse_addr
+from .bil import Int
 
 class Seq(ADT,Sequence) :
     def __init__(self, *args) :
