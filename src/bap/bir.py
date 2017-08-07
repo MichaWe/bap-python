@@ -2,7 +2,8 @@
 
 """BIR - BAP Intermediate Representation"""
 
-from .bil import *
+from collections import Sequence, Mapping
+from .adt import ADT, Map, Seq
 from . import noeval_parser
 
 
