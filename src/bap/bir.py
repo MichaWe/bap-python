@@ -4,7 +4,7 @@
 
 from collections import Sequence, Mapping
 from .adt import ADT
-from .bil import Int
+from .bil import *
 from . import noeval_parser
 
 
