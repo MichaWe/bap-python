@@ -13,7 +13,7 @@ else:
 
 from tempfile import NamedTemporaryFile
 import json
-from . import adt, arm, asm, bil
+from . import adt, arm, asm, bil, bir
 
 import threading
 

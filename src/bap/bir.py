@@ -2,9 +2,9 @@
 
 """BIR - BAP Intermediate Representation"""
 
-from collections import Sequence,Mapping
-from .adt import *
-from .bil import *
+from collections import Sequence, Mapping
+from .adt import ADT
+from .bil import Int
 from . import noeval_parser
 
 
@@ -343,6 +343,12 @@ class Tid(ADT) :
         noname = not isinstance(self.arg, tuple)
         self.number = self.arg if noname else self.arg[0]
         self.name = None if noname else self.arg[1]
+
+    def __eq__(self, other):
+        return self.number == other.number
+
+    def __lt__(self, other):
+        return self.number < other.number
 
     def __cmp__(self, other):
         return cmp(self.number, other.number)

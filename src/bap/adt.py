@@ -182,7 +182,7 @@ leading to fragile and hard to support programs.
 
 """
 
-from collections import Iterable,Sequence,Mapping
+from collections import Iterable
 
 class ADT(object):
     """Algebraic Data Type.
